@@ -23,8 +23,8 @@ body {
 
 .buttons {
     display: flex;
-    align-items: center; /* Alinear los elementos verticalmente */
-    gap: 40px; /* Aumentar el espacio entre los elementos */
+    align-items: center; 
+    gap: 40px; 
     margin-right: 20px;
 }
 
@@ -32,8 +32,7 @@ body {
     text-decoration: none;
     color: #fff;
     padding: 10px 40px;
-    border-radius: 15px;
-    transition: background-color 0.2s, transform 0.2s; /* Cambiar box-shadow a transform */
+    border-radius: 18px;
     font-size: 12px;
 }
 
@@ -42,28 +41,35 @@ body {
     color: #000;
 }
 
+.button.grey:hover {
+    background-color: #bbb; 
+}
+
 .button.black {
     background-color: #4a4a4a;
+}
+
+.button.black:hover {
+    background-color: #333; 
 }
 
 .button.purple {
     background-color: #8C52FF;
 }
 
-.button:hover {
-    transform: scale(1.1); /* Aumentar ligeramente el tamaño del botón */
+.button.purple:hover {
+    background-color: #7b46d8; 
 }
 
 .nav-link {
     text-decoration: none;
     color: #000;
-    font-size: 12px; /* Ajustar el tamaño de la letra */
-    padding: 10px 0; /* Añadir padding vertical para centrar con los botones */
-    transition: transform 0.2s;
+    font-size: 12px; 
+    padding: 10px 0; 
 }
 
 .nav-link:hover {
-    transform: scale(1.1); /* Aumentar ligeramente el tamaño del texto */
+    text-decoration: underline; 
 }
 
 main {
