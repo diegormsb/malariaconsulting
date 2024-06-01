@@ -22,13 +22,6 @@ body {
     box-sizing: border-box; /* Incluir el padding y el borde en el cálculo de la altura */
 }
 
-.logo-section {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centrar el contenido dentro del contenedor */
-    margin-bottom: 20px;
-}
-
 .new-consultation-button {
     background-color: #444;
     color: #fff;
@@ -41,7 +34,7 @@ body {
     transition: all 0.3s;
     width: calc(100% - 20px); /* Ajustar el ancho del botón */
     margin: 0 10px; /* Margen de 10px a cada lado */
-    font-size: 12px; /* Aumentar el tamaño de la letra */
+    font-size: 12px; /* Ajustar tamaño de la letra */
 }
 
 .new-consultation-button::before {
@@ -120,4 +113,64 @@ body {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px; /* Ancho máximo */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #8C52FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #7b46d8;
 }

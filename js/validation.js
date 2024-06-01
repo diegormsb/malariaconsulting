@@ -21,8 +21,22 @@ function validateForm() {
         }
     });
 
+    if (password.value !== confirmPassword.value) {
+        password.style.borderColor = 'red';
+        confirmPassword.style.borderColor = 'red';
+        document.querySelector('label[for="password"]').classList.add('invalid');
+        document.querySelector('label[for="confirm-password"]').classList.add('invalid');
+        isValid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value)) {
+        email.style.borderColor = 'red';
+        document.querySelector('label[for="email"]').classList.add('invalid');
+        isValid = false;
+    }
+
     if (isValid) {
-        // Submit the form or perform further actions
         alert('Formulario enviado exitosamente');
     }
 }

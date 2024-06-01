@@ -32,7 +32,7 @@ body {
     padding: 3px; /* Ajustar el ancho del borde */
     border-radius: 13px;
     animation: gradientAnimation 8s ease infinite; /* Cambiar ease a ease y ajustar velocidad */
-    display: inline-block; /*Asegurarse de que el borde rodee completamente el formulario */
+    display: inline-block; /* Asegurarse de que el borde rodee completamente el formulario */
 }
 
 .register-form {

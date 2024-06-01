@@ -8,10 +8,8 @@
 </head>
 <body>
     <div class="sidebar">
-        <div class="logo-section">
-            <button class="new-consultation-button">Nueva consulta</button>
-        </div>
-        <div class="consultations">
+        <button class="new-consultation-button" onclick="showModal()">Nueva consulta</button>
+        <div class="consultations" id="consultations">
             <!-- Aquí se irán añadiendo las consultas -->
         </div>
         <div class="user-info">
@@ -26,5 +24,17 @@
     <div class="main-content">
         <!-- Contenido principal aquí -->
     </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Ingrese el nombre del paciente</h2>
+            <input type="text" id="patientName" placeholder="Nombre del paciente">
+            <button onclick="addConsultation()">Agregar</button>
+        </div>
+    </div>
+
+    <script src="js/dashboard-scripts.js"></script>
 </body>
 </html>
