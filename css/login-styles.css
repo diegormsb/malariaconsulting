@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     text-align: center;
 }
 
@@ -32,6 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid #b0b0b0; /* Añadir borde delgado de color gris más oscuro */
 }
 
 .login-form label {
@@ -41,67 +42,67 @@ body {
 }
 
 .login-form input {
-width: 100%;
-padding: 10px;
-margin-bottom: 20px;
-border: 1px solid #ccc;
-border-radius: 5px;
-box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .password-container {
-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
 }
 
 .password-container label {
-margin: 0;
-flex: 1;
+    margin: 0;
+    flex: 1;
 }
 
 .password-container .forgot-password {
-margin: 0;
-color: #8C52FF;
-text-decoration: none;
-flex: 1;
-text-align: right;
+    margin: 0;
+    color: #8C52FF;
+    text-decoration: none;
+    flex: 1;
+    text-align: right;
 }
 
 .forgot-password:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 .login-button {
-width: 100%;
-padding: 10px;
-background-color: #8C52FF;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-box-sizing: border-box;
-font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    background-color: #8C52FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 12px;
 }
 
 .login-button:hover {
-background-color: #7b46d8;
+    background-color: #7b46d8;
 }
 
 .signup-text {
-margin-top: 20px;
-color: #000;
-text-align: center;
-width: 100%;
+    margin-top: 20px;
+    color: #000;
+    text-align: center;
+    width: 100%;
 }
 
 .signup-text a {
-color: #8C52FF;
-text-decoration: none;
+    color: #8C52FF;
+    text-decoration: none;
 }
 
 .signup-text a:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }
