@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-size: 14px;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    padding-top: 90px; /* Añadir padding superior para el contenedor */
+}
+
+.register-logo {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.register-title {
+    margin-bottom: 30px; /* Ajusta este valor para cambiar el margen */
+    font-size: 30px;
+}
+
+.register-form {
+    background-color: #e0e0e0;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #b0b0b0; /* Añadir borde delgado de color gris más oscuro */
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-form label {
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.register-form input,
+.register-form select { /* Aplicar estilos al campo select */
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+}
+
+.register-form select {
+    appearance: none; /* Eliminar el estilo predeterminado del navegador */
+    -webkit-appearance: none; /* Eliminar el estilo predeterminado del navegador en Safari */
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"><path d="M1.5 4.5L8 11l6.5-6.5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    padding-right: 40px; /* Espacio para el icono de la flecha */
+}
+
+.name-container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px; /* Ajustar el margen entre los inputs */
+}
+
+.name-container input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8C52FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+}
+
+.register-button:hover {
+    background-color: #7b46d8;
+}
+
+.login-text {
+    margin-top: 15px;
+    color: #000;
+    text-align: center;
+    width: 100%;
+}
+
+.login-text a {
+    color: #8C52FF;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+.mandatory-fields {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888;
+}
+
+.label-required {
+    color: #000;
+}
+
+.label-required.invalid {
+    color: red;
+}

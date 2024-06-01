@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Malaria Consulting</title>
+    <link rel="stylesheet" href="css/register-styles.css">
+</head>
+<body>
+    <div class="register-container">
+        <img src="images/logo.png" alt="Malaria Consulting" class="register-logo">
+        <h2 class="register-title">Bienvenido a <br>malariaConsulting</h2>
+        <div class="register-form">
+            <div class="name-container">
+                <label for="first-name" class="label-required">Nombre(s) *</label>
+                <label for="last-name" class="label-required">Apellido(s) *</label>
+            </div>
+            <div class="name-container">
+                <input type="text" id="first-name" name="first-name">
+                <input type="text" id="last-name" name="last-name">
+            </div>
+            <label for="occupation" class="label-required">Ocupación *</label>
+            <select id="occupation" name="occupation">
+                <option value="" disabled selected>--</option>
+                <option value="medico">Médico</option>
+                <option value="bioanalista">Bioanalista</option>
+                <option value="estudiante">Estudiante de medicina</option>
+                <option value="otro_personal">Otro tipo de personal de salud</option>
+                <option value="otro">Otro</option>
+            </select>
+            <label for="email" class="label-required">Correo electrónico *</label>
+            <input type="email" id="email" name="email">
+            <label for="password" class="label-required">Contraseña *</label>
+            <input type="password" id="password" name="password">
+            <label for="confirm-password" class="label-required">Confirmar contraseña *</label>
+            <input type="password" id="confirm-password" name="confirm-password">
+            <button class="register-button" onclick="validateForm()">Regístrate</button>
+            <p class="login-text">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+        </div>
+        <p class="mandatory-fields">(*) Indica campos obligatorios</p>
+    </div>
+    <script src="js/validation.js"></script>
+</body>
+</html>

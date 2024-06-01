@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 80vh;
     text-align: center;
 }
 
@@ -22,6 +22,7 @@ body {
 
 .login-title {
     margin-bottom: 40px; /* Ajusta este valor para cambiar el margen */
+    font-size: 30px;
 }
 
 .login-form {
