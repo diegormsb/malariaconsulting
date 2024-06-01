@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Asegurar que el body ocupe toda la altura de la ventana */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px; /* Añadir margen alrededor de la barra lateral */
+    border-radius: 10px;
+    height: calc(100vh - 40px); /* Ajustar la altura dinámicamente, restando los márgenes */
+    box-sizing: border-box; /* Incluir el padding y el borde en el cálculo de la altura */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar el contenido dentro del contenedor */
+    margin-bottom: 20px;
+}
+
+.new-consultation-button {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid transparent; /* Borde inicial transparente */
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+    width: calc(100% - 20px); /* Ajustar el ancho del botón */
+    margin: 0 10px; /* Margen de 10px a cada lado */
+    font-size: 12px; /* Aumentar el tamaño de la letra */
+}
+
+.new-consultation-button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 10px;
+    background: linear-gradient(270deg, #8C52FF, #FF6F91);
+    background-size: 600% 600%;
+    z-index: -1;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.new-consultation-button:hover::before {
+    opacity: 1;
+    animation: gradientAnimation 6s ease infinite;
+}
+
+.consultations {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-icon {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 16px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: calc(100% - 290px); /* Ajusta este valor según el ancho de la barra lateral */
+    margin-left: -10px; /* Añadir margen izquierdo */
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 290px; /* Ajustar según el ancho de la barra lateral */
+}
+
+.header-logo {
+    height: 80px;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-left: 290px; /* Ajustar margen izquierdo para evitar superposición con la barra lateral */
+}
+
+.disclaimer {
+    font-size: 10px;
+    color: #ccc;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
