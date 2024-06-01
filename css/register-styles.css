@@ -26,15 +26,29 @@ body {
     font-size: 30px;
 }
 
+.border-wrapper {
+    background: linear-gradient(270deg, #8C52FF, #FF6F91);
+    background-size: 600% 600%;
+    padding: 3px; /* Ajustar el ancho del borde */
+    border-radius: 13px;
+    animation: gradientAnimation 8s ease infinite; /* Cambiar ease a ease y ajustar velocidad */
+    display: inline-block; /*Asegurarse de que el borde rodee completamente el formulario */
+}
+
 .register-form {
     background-color: #e0e0e0;
     padding: 40px;
     border-radius: 10px;
-    border: 1px solid #b0b0b0; /* Añadir borde delgado de color gris más oscuro */
     width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .register-form label {

@@ -25,6 +25,15 @@ body {
     font-size: 30px;
 }
 
+.border-wrapper {
+    background: linear-gradient(270deg, #8C52FF, #FF6F91);
+    background-size: 600% 600%;
+    padding: 3px; /* Ajustar el ancho del borde */
+    border-radius: 13px;
+    animation: gradientAnimation 6s ease infinite; /* Cambiar ease a ease y ajustar velocidad */
+    display: inline-block; /* Asegurarse de que el borde rodee completamente el formulario */
+}
+
 .login-form {
     background-color: #e0e0e0;
     padding: 50px;
@@ -33,7 +42,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #b0b0b0; /* Añadir borde delgado de color gris más oscuro */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .login-form label {
