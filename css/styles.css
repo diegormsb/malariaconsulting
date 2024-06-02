@@ -23,8 +23,8 @@ body {
 
 .buttons {
     display: flex;
-    align-items: center; 
-    gap: 40px; 
+    align-items: center;
+    gap: 40px;
     margin-right: 20px;
 }
 
@@ -34,6 +34,9 @@ body {
     padding: 10px 40px;
     border-radius: 18px;
     font-size: 12px;
+    position: relative;
+    overflow: hidden; /* Asegura que el pseudo-elemento no desborde */
+    z-index: 1;
 }
 
 .button.grey {
@@ -42,7 +45,7 @@ body {
 }
 
 .button.grey:hover {
-    background-color: #bbb; 
+    background-color: #bbb;
 }
 
 .button.black {
@@ -50,26 +53,40 @@ body {
 }
 
 .button.black:hover {
-    background-color: #333; 
+    background-color: #333;
 }
 
 .button.purple {
     background-color: #8C52FF;
 }
 
+.button.purple::before {
+    content: '';
+    position: absolute;
+    top: -1px; /* Ajusta según el grosor del borde */
+    left: -1px; /* Ajusta según el grosor del borde */
+    right: -1px; /* Ajusta según el grosor del borde */
+    bottom: -1px; /* Ajusta según el grosor del borde */
+    border-radius: 20px; /* Ajusta para que coincida con el borde del botón */
+    background: linear-gradient(270deg, #8C52FF, #5D3FD3, #FF6F91, #8C52FF);
+    background-size: 600% 600%;
+    z-index: -1; /* Coloca el pseudo-elemento detrás del botón */
+    animation: gradientAnimation 8s linear infinite;
+}
+
 .button.purple:hover {
-    background-color: #7b46d8; 
+    background-color: #7b46d8;
 }
 
 .nav-link {
     text-decoration: none;
     color: #000;
-    font-size: 12px; 
-    padding: 10px 0; 
+    font-size: 12px;
+    padding: 10px 0;
 }
 
 .nav-link:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 main {
@@ -108,4 +125,10 @@ main {
     max-width: 250px;
     margin: 40px auto 0 auto;
     padding: 0 20px;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
